@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="frontend" label="OBHELPDESK_FRONTEND">
+		<field name="submit_without_login"
+			   type="radio"
+			   label="OBHELPDESK_CONFIG_FRONTEND_SUBMIT_WITHOUT_LOGIN"
+			   description="OBHELPDESK_CONFIG_FRONTEND_SUBMIT_WITHOUT_LOGIN_TT"
+			   default="0"
+			   class="btn-group"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="showFooter"
+			   type="radio"
+			   label="OBHELPDESK_CONFIG_FRONTEND_SHOW_FOOTER"
+			   description="OBHELPDESK_CONFIG_FRONTEND_SHOW_FOOTER_TT"
+			   default="1"
+			   class="btn-group"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="showSpentTime"
+			   type="radio"
+			   label="OBHELPDESK_CONFIG_FRONTEND_SHOW_SPENTTIME"
+			   description="OBHELPDESK_CONFIG_FRONTEND_SHOW_SPENTTIME_TT"
+			   default="1"
+			   class="btn-group"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="overduetime"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_FRONTEND_OVERDUE_TICKETS"
+			   description="OBHELPDESK_CONFIG_FRONTEND_OVERDUE_TICKETS_TT"
+			   default="1440"
+				/>
+		<field name="reply_redirection_customer"
+			   type="list"
+			   label="OBHELPDESK_CONFIG_REPLY_REDIRECTION_CUSTOMER"
+			   description="OBHELPDESK_CONFIG_REPLY_REDIRECTION_CUSTOMER"
+			   default="stay"
+			   class="btn-group"
+				>
+			<option value="stay">OBHELPDESK_CONFIG_REPLY_REDIRECTION_STAY</option>
+			<option value="list">OBHELPDESK_CONFIG_REPLY_REDIRECTION_MYLIST</option>
+		</field>
+		<field name="reply_redirection_staff"
+			   type="list"
+			   label="OBHELPDESK_CONFIG_REPLY_REDIRECTION_STAFF"
+			   description="OBHELPDESK_CONFIG_REPLY_REDIRECTION_STAFF"
+			   default="stay"
+			   class="btn-group"
+				>
+			<option value="stay">OBHELPDESK_CONFIG_REPLY_REDIRECTION_STAY</option>
+			<option value="list">OBHELPDESK_CONFIG_REPLY_REDIRECTION_MYLIST</option>
+		</field>
+
+		<field name="listing_show_lastmessage"
+			   type="radio"
+			   label="OBHELPDESK_CONFIG_TICKETS_LISTING_SHOW_LASTMESSAGE"
+			   description="OBHELPDESK_CONFIG_TICKETS_LISTING_SHOW_LASTMESSAGE"
+			   default="1"
+			   class="btn-group"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="listing_show_staff"
+			   type="radio"
+			   label="OBHELPDESK_CONFIG_TICKETS_LISTING_SHOW_STAFF"
+			   description="OBHELPDESK_CONFIG_TICKETS_LISTING_SHOW_STAFF"
+			   default="1"
+			   class="btn-group"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="announcement"
+		label="OBHELPDESK_SPACER_ANNOUNCEMENT_LBL">
+		<field name="announcement_general"
+			   type="editor"
+			   height="150"
+			   label="OBHELPDESK_SPACER_ANNOUNCEMENT_GENERAL_LBL"
+			   description="OBHELPDESK_SPACER_ANNOUNCEMENT_GENERAL_DES"
+			   filter="safehtml"
+				/>
+		<field name="announcement_tickets"
+			   type="editor"
+			   height="150"
+			   label="OBHELPDESK_SPACER_ANNOUNCEMENT_TICKETS_LBL"
+			   description="OBHELPDESK_SPACER_ANNOUNCEMENT_TICKETS_DES"
+			   filter="safehtml"
+				/>
+		<field name="announcement_newticket"
+			   type="editor"
+			   height="150"
+			   label="OBHELPDESK_SPACER_ANNOUNCEMENT_NEWTICKET_LBL"
+			   description="OBHELPDESK_SPACER_ANNOUNCEMENT_NEWTICKET_DES"
+			   filter="safehtml"
+				/>
+	</fieldset>
+	<fieldset
+			name="frontend_integration"
+			label="OBHELPDESK_FRONT_END_INTEGRATION"
+			addfieldpath="administrator/components/com_obhelpdesk/models/fields/">
+		<field name="userprofiler"
+			   type="userprofiler"
+			   label="OBHELPDESK_CONFIG_OTHER_SELECT_USERS_MANAGEMENT"
+			   description="OBHELPDESK_CONFIG_OTHER_SELECT_USERS_MANAGEMENT_TT"
+			   default="none"
+				/>
+		<field name="userprofiler_custom_url"
+			   type="text"
+			   class="input-block-level"
+			   label="OBHELPDESK_CONFIG_OTHER_PROFILE_CUSTOM_URL"
+			   description="OBHELPDESK_CONFIG_OTHER_PROFILE_CUSTOM_URL_DESC"
+			   size="120"
+			   default=""
+				/>
+		<field name="faq_manager"
+			   type="list"
+			   label="OBHELPDESK_CONFIG_OTHER_SELECT_FAQS"
+			   description="OBHELPDESK_CONFIG_OTHER_SELECT_FAQS_TT"
+			   default="content"
+				>
+			<option value="content">Content</option>
+			<option value="k2">K2</option>
+			<option value="zoo">ZOO (coming soon)</option>
+		</field>
+		<field name="avatar"
+			   type="list"
+			   label="OBHELPDESK_CONFIG_OTHER_SELECT_AVATARS"
+			   description="OBHELPDESK_CONFIG_OTHER_SELECT_AVATARS_TT"
+			   default="none"
+				>
+			<option value="gravatar">Gavatar</option>
+			<option value="com_kunena">Kunena</option>
+			<option value="com_comprofiler">Community Builder</option>
+			<option value="com_community">JomSocial</option>
+			<option value="com_alphauserpoints">AlphaUserPoints</option>
+			<option value="">No Avatar</option>
+		</field>
+	</fieldset>
+	<fieldset name="cron_email" label="OBHELPDESK_CRON_EMAIL">
+		<field name="cron_enable"
+			   type="radio"
+			   label="OBHELPDESK_CONFIG_EMAIL_ENABLE"
+			   description="OBHELPDESK_CONFIG_EMAIL_ENABLE_TT"
+			   default="0"
+			   class="btn-group"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<!-- 
+		<field name="cron_type" 
+			type="list"
+			label="OBHELPDESK_CONFIG_EMAIL_CRON_TYPE"
+			description="OBHELPDESK_CONFIG_EMAIL_CRON_TYPE_TT"
+			default="stay"
+			class="btn-group"
+		>
+			<option value="manual">OBHELPDESK_CONFIG_EMAIL_CRON_TYPE_MANUAL</option>
+			<option value="auto">OBHELPDESK_CONFIG_EMAIL_CRON_TYPE_AUTOMATIC</option>
+		</field>
+		
+		<field name="cron_checkinterval" 
+			type="text"
+			label="OBHELPDESK_CONFIG_EMAIL_CHECK_INTERVAL"
+			description="OBHELPDESK_CONFIG_EMAIL_CHECK_INTERVAL_TT"
+			default=""
+		/> 
+		-->
+
+		<field name="cron_acceptnewtickets"
+			   type="list"
+			   label="OBHELPDESK_CONFIG_EMAIL_ACCEPT_NEW_BY"
+			   description="OBHELPDESK_CONFIG_EMAIL_ACCEPT_NEW_BY_TT"
+			   default="yes"
+				>
+			<option value="all">OBHELPDESK_CONFIG_EMAIL_ACCEPT_NEW_EVERYONE</option>
+			<option value="users">OBHELPDESK_CONFIG_EMAIL_ACCEPT_NEW_USERS</option>
+			<option value="no">OBHELPDESK_CONFIG_EMAIL_ACCEPT_NEW_NOBODY</option>
+		</field>
+
+		<field name="cron_defaultdepartment"
+			   type="department"
+			   label="OBHELPDESK_CONFIG_EMAIL_ASSIGNED_DEPARTMENT"
+			   description="OBHELPDESK_CONFIG_EMAIL_ASSIGNED_DEPARTMENT_TT"
+			   default="yes"
+				/>
+
+		<field name="cron_emailaddress"
+			   type="text"
+			   label="COM_OBHELPDESK_CONFIG_CRON_EMAIL_ADDRESS_LABEL"
+			   description="COM_OBHELPDESK_CONFIG_CRON_EMAIL_ADDRESS_DESC"
+			   default=""/>
+
+		<field name="cron_fullname"
+			   type="text"
+			   label="COM_OBHELPDESK_CONFIG_CRON_FULLNAME_LABEL"
+			   description="COM_OBHELPDESK_CONFIG_CRON_FULLNAME_DESC"
+			   default=""/>
+
+
+		<field name="cron_protocol"
+			   type="list"
+			   label="COM_OBHELPDESK_CONFIG_CRON_PROTOCOL_LABEL"
+			   description="COM_OBHELPDESK_CONFIG_CRON_PROTOCOL_DESC"
+			   default="imap">
+			<option value="pop">POP</option>
+			<option value="imap">IMAP</option>
+		</field>
+
+		<field name="cron_servername"
+			   type="text"
+			   label="COM_OBHELPDESK_CONFIG_CRON_SERVERNAME_LABEL"
+			   description="COM_OBHELPDESK_CONFIG_CRON_SERVERNAME_DESC"
+			   default="imap.gmail.com"/>
+
+		<field name="cron_port"
+			   type="text"
+			   label="COM_OBHELPDESK_CONFIG_CRON_PORT_LABEL"
+			   description="COM_OBHELPDESK_CONFIG_CRON_PORT_DESC"
+			   default="993"/>
+
+		<field name="cron_ssl"
+			   type="list"
+			   label="COM_OBHELPDESK_CONFIG_CRON_SSL_LABEL"
+			   description="COM_OBHELPDESK_CONFIG_CRON_SSL_DESC"
+			   default="">
+			<option value="">none</option>
+			<option value="/tls">TLS</option>
+			<option value="/ssl">SSL</option>
+		</field>
+
+		<field name="cron_username"
+			   type="text"
+			   label="COM_OBHELPDESK_CONFIG_CRON_USERNAME_LABEL"
+			   description="COM_OBHELPDESK_CONFIG_CRON_USERNAME_DESC"
+			   default=""/>
+
+		<field name="cron_password"
+			   type="password"
+			   label="COM_OBHELPDESK_CONFIG_CRON_PASSWORD_LABEL"
+			   description="COM_OBHELPDESK_CONFIG_CRON_PASSWORD_DESC"
+			   default=""/>
+	</fieldset>
+	<fieldset
+			name="mail"
+			label="OBHELPDESK_EMAIL_CONFIGS">
+		<field
+				name="mailer"
+				type="list"
+				default="mail"
+				label="COM_CONFIG_FIELD_MAIL_MAILER_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_MAILER_DESC"
+				required="true"
+				filter="word">
+			<option
+					value="mail">COM_CONFIG_FIELD_VALUE_PHP_MAIL
+			</option>
+			<option
+					value="sendmail">COM_CONFIG_FIELD_VALUE_SENDMAIL
+			</option>
+			<option
+					value="smtp">COM_CONFIG_FIELD_VALUE_SMTP
+			</option>
+		</field>
+
+		<field
+				name="mailfrom"
+				type="email"
+				label="COM_CONFIG_FIELD_MAIL_FROM_EMAIL_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_FROM_EMAIL_DESC"
+				filter="string"
+				size="30"
+				validate="email"/>
+
+		<field
+				name="fromname"
+				type="text"
+				label="COM_CONFIG_FIELD_MAIL_FROM_NAME_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_FROM_NAME_DESC"
+				filter="string"
+				size="30"/>
+
+		<field
+				name="sendmail"
+				type="text"
+				default="/usr/sbin/sendmail"
+				label="COM_CONFIG_FIELD_MAIL_SENDMAIL_PATH_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_SENDMAIL_PATH_DESC"
+				filter="string"
+				size="30"/>
+
+		<field
+				name="smtpauth"
+				type="radio"
+				default="0"
+				label="COM_CONFIG_FIELD_MAIL_SMTP_AUTH_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_SMTP_AUTH_DESC"
+				filter="integer"
+				class="btn-group"
+				>
+			<option
+					value="1">JYES
+			</option>
+			<option
+					value="0">JNO
+			</option>
+		</field>
+
+		<field
+				name="smtpsecure"
+				type="list"
+				default="none"
+				label="COM_CONFIG_FIELD_MAIL_SMTP_SECURE_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_SMTP_SECURE_DESC"
+				filter="word">
+			<option
+					value="none">COM_CONFIG_FIELD_VALUE_NONE
+			</option>
+			<option
+					value="ssl">COM_CONFIG_FIELD_VALUE_SSL
+			</option>
+			<option
+					value="tls">COM_CONFIG_FIELD_VALUE_TLS
+			</option>
+		</field>
+
+		<field
+				name="smtpport"
+				type="text"
+				default="25"
+				label="COM_CONFIG_FIELD_MAIL_SMTP_PORT_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_SMTP_PORT_DESC"
+				required="true"
+				filter="string"
+				size="6"/>
+
+		<field
+				name="smtpuser"
+				type="text"
+				label="COM_CONFIG_FIELD_MAIL_SMTP_USERNAME_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_SMTP_USERNAME_DESC"
+				filter="string"
+				size="30"/>
+
+		<field
+				name="smtppass"
+				type="password"
+				label="COM_CONFIG_FIELD_MAIL_SMTP_PASSWORD_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_SMTP_PASSWORD_DESC"
+				filter="raw"
+				size="30"/>
+
+		<field
+				name="smtphost"
+				type="text"
+				default="localhost"
+				label="COM_CONFIG_FIELD_MAIL_SMTP_HOST_LABEL"
+				description="COM_CONFIG_FIELD_MAIL_SMTP_HOST_DESC"
+				filter="string"
+				size="30"/>
+	</fieldset>
+
+	<fieldset name="autoclose" label="OBHELPDESK_AUTOCLOSE">
+		<field name="autoclose_Enable"
+			   type="radio"
+			   label="OBHELPDESK_CONFIG_AUTOCLOSE_ENABLE"
+			   description="OBHELPDESK_CONFIG_AUTOCLOSE_ENABLE_TT"
+			   default="0"
+			   class="btn-group"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="autoclose_Check_Interval"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_AUTOCLOSE_CHECK_INTERVAL"
+			   description="OBHELPDESK_CONFIG_AUTOCLOSE_CHECK_INTERVAL_TT"
+			   default="10"
+				/>
+		<field name="autoclose_Interval"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_AUTOCLOSE_CLOSE_INTERVAL"
+			   description="OBHELPDESK_CONFIG_AUTOCLOSE_CLOSE_INTERVAL_TT"
+			   default="5"
+				/>
+	</fieldset>
+	<fieldset name="utility" label="OBHELPDESK_UTILITY">
+		<field name="utility_attachkey"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_ATTACHFILE_DETECTKEY"
+			   description="OBHELPDESK_CONFIG_ATTACHFILE_DETECTKEY_TT"
+			   default="10"
+			   class="obhelpdesk-utility"
+				/>
+		<field name="utility_recaptcha_Enable"
+			   type="radio"
+			   label="OBHELPDESK_CONFIG_RECAPTCHA_ENABLE"
+			   description="OBHELPDESK_CONFIG_RECAPTCHA_ENABLE_TT"
+			   default="0"
+			   class="btn-group"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="utility_recaptcha_publickey"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_RECAPTCHA_PUBLICKEY"
+			   description="OBHELPDESK_CONFIG_RECAPTCHA_PUBLICKEY_TT"
+			   default="6LeGBsESAAAAAKRjPo07339rZc_LCJ67nGySvKEt"
+			   class="obhelpdesk-utility"
+				/>
+		<field name="utility_recaptcha_privatekey"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_RECAPTCHA_PRIVATEKEY"
+			   description="OBHELPDESK_CONFIG_RECAPTCHA_PRIVATEKEY_TT"
+			   default="6LeGBsESAAAAAKOIrKAD5Z7R5RFHM6989hOdntq6"
+			   class="obhelpdesk-utility"
+				/>
+	</fieldset>
+	<fieldset name="helpdesk_email" label="OBHELPDESK_HELPDESK_EMAIL">
+		<field name="hdemail_use_global"
+			   type="list"
+			   label="OBHELPDESK_CONFIG_HDEMAIL_USE_GLOBAL"
+			   description="OBHELPDESK_CONFIG_HDEMAIL_USE_GLOBAL_TT"
+			   default="1"
+				>
+			<option value="1">OBHELPDESK_CONFIG_HDEMAIL_USE_GLOBAL_SETTINGS</option>
+			<option value="2">OBHELPDESK_CONFIG_HDEMAIL_USE_GLOBAL_CRON_SETTINGS</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="hdemail_address"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_HDEMAIL_FROM_ADDRESS"
+			   description="OBHELPDESK_CONFIG_HDEMAIL_FROM_ADDRESS_TT"
+			   default=""
+				/>
+		<field name="hdemail_address_fullname"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_HDEMAIL_FROM_NAME"
+			   description="OBHELPDESK_CONFIG_HDEMAIL_FROM_NAME_TT"
+			   default=""
+				/>
+	</fieldset>
+	<fieldset name="custom_fields" label="OBHELPDESK_CUSTOM_FIELDS">
+		<field name="cutomfield_date_format"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_CUSTOM_FIELD_DATE_FORMAT"
+			   description="OBHELPDESK_CONFIG_CUSTOM_FIELD_DATE_FORMAT"
+			   default=""
+				/>
+		<field name="cutomfield_datetime_format"
+			   type="text"
+			   label="OBHELPDESK_CONFIG_CUSTOM_FIELD_DATETIME_FORMAT"
+			   description="OBHELPDESK_CONFIG_CUSTOM_FIELD_DATETIME_FORMAT"
+			   default=""
+				/>
+	</fieldset>
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" validate="rules"
+			   filter="rules" component="com_obhelpdesk" section="component"/>
+	</fieldset>
+
+</config>

@@ -1,0 +1,54 @@
+.editorWYSIWYG {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-weight: 300;}
+.editorBBCODE {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-weight: 300;}
+
+div.richeditor div.editbar {
+	border-left:1px solid silver;border-right:1px solid silver;
+	border-top:1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+	background: #f5f5f5;
+}
+div.richeditor div button{vertical-align:middle;width:25px;height:25px;border:1px solid transparent;background-color:Transparent;cursor:pointer;color:Black;background-position:center;background-repeat:no-repeat; padding: 0;}
+div.richeditor div button:hover{background-color: #C0c0c0}
+div.richeditor div.editor-container {border-top:none;border-bottom:1px solid silver;border-left:1px solid silver;border-right:1px solid silver;}
+div.richeditor textarea{padding:0px 0px 0px 0px;border:none;}
+div.richeditor iframe{
+	background-color:#ffffff;
+	border:none;
+}
+
+.wysiwyg_bbcode_btn_bold {
+	font-weight: bold;
+}
+.wysiwyg_bbcode_btn_italic {
+	font-style: italic;
+}
+.wysiwyg_bbcode_btn_underline {
+	text-decoration: underline;
+}
+.wysiwyg_bbcode_btn_hyperlink {
+	background-image: url('images/url.gif')
+}
+.wysiwyg_bbcode_btn_image {
+	background-image:url('images/img.gif');
+}
+.wysiwyg_bbcode_btn_list {
+	background-image:url('images/icon_list.gif');
+}
+.wysiwyg_bbcode_btn_color {
+	background-image:url('images/colors.gif');
+}
+.wysiwyg_bbcode_btn_quote {
+	background-image:url('images/icon_quote.png');
+}
+.wysiwyg_bbcode_btn_youtube {
+	background-image:url('images/icon_youtube.gif');
+}
+.wysiwyg_bbcode_btn_source {
+	background-image:url('images/icon_html.gif');
+}
+#foobla div.richeditor div button.wysiwyg_bbcode_btn_cannedresponses,
+.wysiwyg_bbcode_btn_cannedresponses {
+	width: inherit;
+	font-size: 12px;
+	/*background-image:url('images/icon_cannedresponses.png');*/
+}

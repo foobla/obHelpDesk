@@ -1,0 +1,133 @@
+$Id: CHANGELOG 103 2013-12-18 10:42:49Z thongta $
+
+/* 3.1n - 2014.02.06 */
++ Added External Department Type, link to external URL (outside of obHelpDesk).
++ Added General Announcement feature.
++ Added help-block for fields in Submit New Ticket form.
+
+/* 3.1m - 2013.23.18 */
++ Move all hardcoded text from SITE into .ini translation file.
+
+/* 3.1l - 2013.09.18 */
+~ Fixed email template issues
+~ Delete, Update ticket in ticket listing
+~ Cron Email
+~ Auto Close
+
+
+/* 3.1k - 2013.09.12 */
+~ Fixed email template issues
++ Add auto assign new ticket to free staff
++ Auto send email to all staff member in department
+
+/* 3.1j - 2013.09.03 */
+~ Fixed issue: "Show unpublished departments on Department filter"
+~ Fixed issue: Missing translate at submit new ticket layout
+~ Fixed issue: obHelpDesk not use email template when send email.
+
+
+/* 3.1i - 2013.09.03 */
+~ Fixed some "KnowledgeBase Category" issues
+
+/* 3.1h - 2013.08.17 */
+~ Fixed issue: Only staff can see 'Canned Responses'
+~ Fixed issue: Report and Export feature not work
+~ Fixed issue: Wrong icon link in Dashboard
+~ Fixed issue: Cannot submit a ticket with the existed email in the website 
+~ Fixed issue: Cannot reply the ticket without login
+~ Fixed issue: Some language of module and component
+~ Fixed issue: Name of Customer not show in ticket listing
+
+/* 3.1g - 2013.08.15 */
+~ Fixed issue: Move ticket to other department show both publishe/unpublished department.
+~ Fixed issue: Show tickets in unpublished department.
+~ Fixed issue: Redirect to home page after search, filter ticket in ticket listing.
+
+/* 3.1e - 2013.08.03 */
+~ Fixed issue: Move ticket to other department
+~ Improve performance on ticket listing page
+
+/* 3.1d - 2013.08.01 */
+~ Fixed minor issues with pagination.
+
+/* 3.1c - 2013.07.30 */
+~ Fixed wrong format in email content.
+~ Fixed wrong conditions for sending email notifications.
+
+/* 3.1b - 2013.07.04 */
++ Revamp obHelpDesk to 3.x series, support both Joomla! 2.5 and Joomla! 3.
++ Implemented Twitter Bootstrap UI into both Frontend and Backend.
++ Able to view/reply ticket without logged in (for customer).
++ Unlimited Priorities support.
++ Added label color for Departments and Priorities.
++ Optimized performance for ticket listing as well as ticket details page.
++ Improved UX/UI for Tickets Listing Page.
++ Improved UX/UI for Ticket Details Page.
++ Knowledgebase is now manage-able via Joomla! Plugins. Supports Content & K2, more is coming later.
++ Email notification content is now manage-able.
+
+/* 2.2o - 2011.08.05 */
+~ Fixed "Can't submit a ticket" on IEs & Opera browsers.
+~ Fixed some translations bugs.
+~ Fixed some minor bugs.
+
+/* 2.2m - 2011.07.26 */
++ Compatible Joomla 1.7
+
+/* 2.2l - 2011.07.03 */
+~ Fixed "Cannot add staff" bug.
+~ Make Tickets Listing work with Rockettheme Templates.
+~ Improved Translation for Attachment Detector.
+
+/* 2.2k - 2011.06.22 */
+~ Fixed "Auto Assign" bug.
+~ Fixed Note display bug in IE 7.
+~ Fixed Auto Create User Link Activation and Password.
++ Add "JE FAQ PRO" support.
++ Add many language files. 
++ Add "Submit without login" feature.
+~ Increase Notes Field Size in Ticket view.
+
+
+/* 2.2j - 2011.05.10 */
+~ Fixed "Rating on ticket closing form" bug.
+~ Fixed "Menu bar layout" in Joomla 1.6 backend.
+~ Fixed "Configuration page" in Joomla 1.6 backend.
+~ Fixed TinyMCE bug in Joomla 1.6.
+~ Fixed "Department layout" in Joomla 1.6 backend.
+
+/* 2.2i - 2011.04.27 */
+~ Fixed the bug: lost form data when entered wrong captcha
+
+/* 2.2h - 2011.04.23 */
+~ Depend on group's permission, 'staff' select list will be diappeared when submmiting ticket.
+
+/* 2.2g - 2011.04.12 */
+~ Fixed the bug "Automatic Assignment is not worked"
+
+/* 2.2f - 2011.04.11 */
+~ Fixed the bug "cannot submit ticket on IE7" and some other javascript error on Joomla 1.5 and joomla 1.6 
+
+/* 2.2e - 2011.04.05 */
+~ Add some tooltips at Backend.
+~ Fixed mail bugs occur when submit ticket.
+
+/* 2.2d - 2011.03.28 */
+~ Fixed some GUI bugs.
+~ Fixed some bugs occur in Debug Mode.
+
+/* 2.2c - 2011.03.17 */
+~ Fixed some GUI bugs.
+~ Fixed some javascript bugs to works with IE7+.
+
+/* 2.2b - 2011.02.25 */
+~ the first version which works with both Joomla 1.5  Joomla 1.6.
+
+/* 2.1.2 - 2011.01.24*/
++ Add default reCAPTCHA keys into the installation.
+
+/* 2.1.1 - 2011.01.24*/
++ Fix some minor bugs.
+
+/* 2.1 - 2010.12.31 */
+- launch build

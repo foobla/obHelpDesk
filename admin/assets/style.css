@@ -1,0 +1,333 @@
+html {
+     overflow-y: scroll;
+}
+.icon-32-saveClose {
+background-image:url(./images/icons/icon-32-save.png);
+}
+.icon-32-saveCopy {
+background-image:url(./images/icons/icon-32-save-copy.png);
+}
+.icon-32-saveNew {
+background-image:url(./images/icons/icon-32-save-new.png);
+}
+.icon-48-jlord-langs {
+	background-image:url(./images/icons/langs_48.png);
+}
+.icon-32-langs {
+background-image:url(./images/icons/icon-32-langs.png);
+}
+.icon-32-export-import {
+background-image:url(./images/icons/icon-32-export-import.png);
+}
+.icon-48-icon-48-article {
+	background-image:url(./images/icons/icon-48-article.png);
+}
+.icon-48-obhelpdesk {
+	background-image:url(./images/icons/obhelpdesk_48.png);
+}
+.icon-48-reports {
+	background-image:url(./images/icons/reports_48.png);
+}
+
+.icon-48-icon-48-article-add {
+	background-image:url(./images/icons/icon-48-article-add.png);
+}
+
+.icon-48-icon-48-frontpage {
+	background-image:url(./images/icons/icon-48-frontpage.png);
+}
+
+.icon-48-tools_48 {
+	background-image:url(./images/icons/tools_48.png);
+}
+.icon-48-cronlog {
+	background-image:url(./images/icons/icon-48-cron.png);
+}
+.icon-48-export-import {
+	background-image:url(./images/icons/icon-48-export-import.png);
+}
+.icon-48-about {
+	background-image:url(./images/icons/icon-48-default.png);
+}
+.progress_status{
+	background-image:url(images/pbar-ani.gif);
+	background-repeat:repeat-x;
+}
+.progress_status.stop{
+	background-image:url(images/pbar.jpg);
+	background-repeat:repeat-x;
+}
+
+.icon-48-config {
+	background-image:url(./images/icons/icon-48-config.png);
+}
+
+.icon-48-tools {
+	background-image:url(./images/icons/icon-48-tools.png);
+}
+
+.icon-48-upgrade {
+	background-image:url(./images/icons/icon-48-upgrade.png);
+}
+
+.icon-48-langs {
+	background-image:url(./images/icons/icon-48-langs.png);
+}
+
+.icon-48-departments {
+	background-image:url(./images/icons/icon-48-departments.png);
+}
+.icon-48-departments-new {
+	background-image:url(./images/icons/icon-48-departments-new.png);
+}
+.icon-48-groups {
+	background-image:url(./images/icons/icon-48-groups.png);
+}
+.icon-48-groups-new {
+	background-image:url(./images/icons/icon-48-groups-new.png);
+}
+.icon-48-staffs {
+	background-image:url(./images/icons/icon-48-staffs.png);
+}
+.icon-48-staffs-new {
+	background-image:url(./images/icons/icon-48-staffs-new.png);
+}
+.icon-48-custom-fields {
+	background-image:url(./images/icons/icon-48-custom-fields.png);
+}
+.icon-48-custom-fields-new {
+	background-image:url(./images/icons/icon-48-custom-fields-new.png);
+}
+.icon-48-reply-template {
+	background-image:url(./images/icons/icon-48-reply-template.png);
+}
+.icon-48-reply-template-new {
+	background-image:url(./images/icons/icon-48-reply-template-new.png);
+}
+.icon-48-customer-care {
+	background-image:url(./images/icons/icon-48-customer-care.png);
+}
+.icon-48-customer-care-new {
+	background-image:url(./images/icons/icon-48-customer-care-new.png);
+}
+
+.icon-48-priority {
+	background-image:url(./images/icons/priority_32.png);
+}
+
+div.current {padding: 0;}
+div.jform{
+	/*background:#F9F9F9;*/
+	/*border:2px solid #CCCCCC;*/
+	overflow:hidden;
+}
+div.jform.obhelpdesk {
+	/*background: url(images/foobla-channel.gif) no-repeat bottom left;*/
+}
+div.jform.obsuggest {
+	/*background: url(images/foobla-channel.gif) no-repeat bottom left;*/
+}
+div.jform input.summary{
+	width:388px;
+}
+div.jform input.e-mail{
+	width:200px;
+	background-color:#EFEFEF;
+}
+div.jform textarea.description{
+	width:388px;
+	height:165px;
+	border:1px solid #CCCCCC;
+}
+
+div.jform span.message{
+	color: #0099d9;
+}
+
+div.jform span.title{
+	font-size:14px;
+	color:#0099d9;
+	font-weight:bold;
+}
+
+p.obDesc {
+	font-style: italic;
+	background: #F0F0F0;
+	padding: 5px;
+}
+span.obTitle {
+	font-weight: bold;
+}
+div.jform a {
+	color: #0099d9;
+}
+
+.icon-32-cleancache{ background-image: url(images/icons/icon-32-cleancache.png); }
+.icon-32-cronlogs{ background-image: url(images/icons/icon-32-cron.png); }
+
+div.strip-tags-table{
+	color:#666666;
+}
+div.strip-tags-table div.button{
+	border:1px solid #CCCCCC;
+	background-color:#CCCCCC;
+	cursor:pointer;
+	padding:2px;
+}
+div.strip-tags-table div.items-container{
+	position:absolute;
+	z-index:1000;
+	background:#FFFFFF;
+	border:1px solid #CCCCCC;
+	padding:1px;
+}
+div.strip-tags-table div.items-container.hide{
+	display:none;
+	opacity: 0;
+}
+div.strip-tags-table div.items-container div.close{
+	float:right;
+	cursor:pointer;
+}
+div.strip-tags-table div.items-container div.close:hover{
+	color:#FF0000;
+}
+div.strip-tags-table div.items-container div.item{
+	border:1px solid transparent;
+	clear:both;
+}
+div.strip-tags-table div.items-container div.item:hover{
+	border:1px solid #CCCCCC;
+	background:#FFFFCC;
+}
+div.strip-tags-table div.items-container div.item span{
+	display:table-cell;
+	cursor:pointer;
+}
+div.strip-tags-table div.items-container div.item span:hover{
+	color:#3366FF;
+}
+div.strip-tags-table div.items-container div.item span.tag{
+	width:30px;
+}
+div#option-toggle.open{
+	background-image:url(../../../templates/khepri/images/j_arrow_down.png);
+}
+div#option-toggle{
+	background-image:url(../../../templates/khepri/images/j_arrow.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+div.tips{
+	border:1px solid #999999;margin-bottom:10px;
+	background-color:#FFFFFF;
+	width:400px;
+	position:fixed;
+	
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+	height:110px;
+}
+div.tips div.title{
+	background-color:#E5E5E5;padding:3px;
+	cursor:move;
+	font-weight: bold;
+}
+div.tips div.image{
+	display:table-cell;
+	width:50px;
+	background-image:url(images/tips.png);
+	background-repeat:no-repeat;
+	background-position:center 30px;
+	height:85px;
+	/*padding:70px 3px 0px 3px;*/
+}
+div.tips div.description{
+	display:table-cell;
+	vertical-align:middle;
+	cursor:default;
+}
+div.tips div.command{
+	margin:3px 3px;
+	text-align:center;
+}
+div.tips div.button{
+	width:20px;
+	height:16px;
+	display:table-cell;
+	background-repeat:no-repeat;
+	background-position:center;
+	padding:0px 2px;
+	cursor:pointer;
+}
+div.tips div.button.close{
+	cursor:pointer;
+	float:right;
+	border:1px solid transparent;
+}
+div.tips div.button.close:hover{
+	color:#0000FF;
+}
+div.tips div.button.prev{
+	background-image:url(images/rewindtostart.png);
+}
+div.tips div.button.next{
+	background-image:url(images/forwardtoend.png);
+}
+div.tips div.button.randomize{
+	background-image:url(images/random.png);
+}
+#obNoticeBox {
+	border: 5px solid orange;
+	margin: 0 200px 10px 200px;
+	padding: 10px;
+	background: lightgrey;
+}
+
+#obNoticeBox ul li {
+	font-size: large;
+}
+.obhelpdesk-jed {
+	padding: 10px 10px 10px 50px;
+	border: 1px solid #CCCCCC;
+	overflow: hidden;
+	background: url(./images/foobla-channel_48.png) no-repeat bottom left;
+	font-size: medium;
+	text-align: right;
+}
+
+div.width-60 ul.adminformlist li > label, div.width-50 ul.adminformlist li > label{
+	width: 250px;
+}
+
+div.width-60 ul.adminformlist li input, div.width-50 ul.adminformlist li input{
+	font-size: 1.364em;
+}
+
+ul.adminformlist li .inputbox{ 
+	width: 300px !important;
+}
+
+ul.adminformlist li textarea{
+	width: 300px !important;
+	height: 100px;
+}
+
+ul.adminformlist li div.emailnote{
+	font-size: 1.091em;
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+ul.adminformlist li .inputstaff{
+	width: 150px;
+}
+
+ul.adminformlist li .obhelpdesk-utility{
+	width: 60%;
+}
+
+#foobla form fieldset.radio.btn-group label.btn {
+	clear: none;
+}

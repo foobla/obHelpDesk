@@ -1,0 +1,279 @@
+body,html {
+	margin:0;
+	padding:0;
+	color:#000;
+}
+a {
+	text-decoration:none;
+}
+#wrap {
+	margin:0 auto;
+	background:#fff;
+}
+#header {
+	background:#fff;
+	margin-bottom:10px;
+}
+.header-box {
+	position:relative;
+	height:41px;
+ }
+.header-box img {
+	position:absolute;
+	width:100%;
+	height:100%;
+ }
+.header-box div {
+	position:absolute;
+	width:100%;
+	height:100%;
+	color:#fff;
+	padding:5px 10px;
+}
+h1 {
+	margin:0;
+   }
+#timeframe {
+	padding:10px 0 15px;
+	margin-top:-24px;
+	margin-right:128px;
+	background:url("../images/tf_bg.png") repeat scroll 0 0 transparent;
+	float: right;
+	width:600px;
+}
+#timeframe ul {
+	padding-left:0;
+	padding-bottom:5px;
+	list-style:none;
+	text-align:center;
+	margin:0;
+}	
+#timeframe li {
+	display:inline;
+	margin:0 7px;
+	padding:0;
+	font-size:110%;
+	text-transform: uppercase;
+}
+#timeframe li a {
+	color:#777777;
+	font-weight:bold;
+	text-decoration:none;
+}
+#timeframe li a:hover {
+	color:#910e14 !important;
+}
+#timeframe li.tf_selected a {
+	color:#910e14 !important;
+}
+div.sa-header {
+	position:relative;
+	padding:5px;
+	display:inline;
+	float:left;
+}
+div.header-buttons {
+	height: 61px;
+}
+div.sa-header span.title {
+	font-size:110%;
+	color:#eee;
+}
+div.sa-header span.content {
+	font-size:130%;
+	color:#fff;
+}
+#main {
+	float:right;
+}
+div.form-selections {
+	height: 35px;
+}
+h2 {
+	margin:0 0 1em;
+}
+#sidebar {
+	background:#fff;
+	float:left;
+	padding:10px;
+	margin-top:10px;
+}
+#sidebar li.selected {
+	font-weight:bold;
+}
+#sidebar div.report a, #sidebar div.links a {
+	font-weight:bold;
+	color:#fff !important;
+	border-style: solid;
+	border-width: 1px 0;
+	padding:3px;
+	margin-bottom:12px;
+	text-decoration: none;
+	font-size: 110%;
+	font-family: arial,verdana,sans-serif;
+	line-height: 20px;
+	display:block;
+}
+#sidebar div.report a {
+	background:none repeat scroll 0 0 #696969;
+	border-color: #696969;
+}
+#sidebar ul {
+	display: block;
+	list-style: none;
+	margin-left: -28px;
+}
+#sidebar ul li {
+	display: block;
+	list-style: none;
+	border-bottom: 1px solid #CCCCCC;
+	margin-bottom: 6px;
+}
+#sidebar li a {
+	display: block;
+	color: #777;
+	font-weight:bold;
+	text-decoration: none;
+	font-size:110%;
+}
+#sidebar li a:hover {
+	color:#910e14 !important;
+}
+#sidebar li.selected_report a {
+	color:#910e14 !important;
+}
+.table-header{
+	color:#fff;
+	background-color:#696969;
+	font-weight:bold;
+	text-align:center;
+}
+.beige-background {
+	background-color: beige;
+}
+.orange-background {
+	background-color: orange;
+}
+#sa-footer {
+	clear:both;
+	padding:5px 10px;
+	background:#cc9;
+}
+#sa-footer p {
+	margin:0;
+}
+* html #footer {
+	height:1px;
+}
+
+.icon-48-salesanalytics {
+	background-image: url("../images/header.png");
+	padding-left: 440px !important;
+}
+.icon-32-reports {
+	background-image: url("../images/reports.png");
+}
+.sa-title {
+	color: #910e14;
+	margin-bottom:5px;
+}
+.tf-form {
+	font-size: 110%;
+	color: rgb(119, 119, 119);
+	font-weight: bold;
+	text-align: center;
+}
+.sidebar-icons {
+	float:right;
+	margin-right:4px;
+	margin-top:-2px;
+}
+.additional_param, .additional_param2, .additional_param3 {
+	float: left;
+	color: #696969;
+	font-size: 110%;
+	margin-right: 10px;
+}
+.additional_param, .additional_param2 {
+	margin-left: 5px;
+}
+.additional_param {
+	margin-top: 15px;
+}
+.additional_param2 {
+	margin-top: 20px;
+}
+.additional_param3 {
+	margin-top: 20px;
+	margin-right: 5px;
+	float:left;
+}
+.combined_params, .combined_params2 {
+	font-size:110%;
+	color:#696969;
+	margin-top:20px;
+}
+.combined_param {
+	margin-left:7px;
+}
+.combined_params2 {
+}
+.comparison_param {
+	margin-left:7px;
+	size:120%;
+	font-weight:bold;
+	color:#910e14;
+	font-size: 120%;
+}
+.comparison_form_button {
+	margin:7px;
+}
+.geomap {
+	margin-top:10px;
+}
+div.additional_box {
+	margin-top:20px !important;
+}
+ul.additional_box li {
+	margin-left: -14px;
+}
+ul.additional_box li a {
+	display: inline !important;
+}
+.additional_icons {
+	padding-bottom:5px;
+}
+#sidebar div.links a {
+	background:none repeat scroll 0 0 #910e14;
+	border-color: #910e14;
+}
+.warning-title {
+	font-weight:bold;
+	color:#910e14;
+	font-size: 120%;
+}
+.warning {
+	font-weight:bold;
+	font-style:italic;
+	color:#696969;
+	font-size: 110%;
+}
+.message, .message-title {
+	font-size: 120%;
+	color:#696969;
+}
+.message-title {
+	font-weight:bold;
+}
+.highlight {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.obhelpdesk-report .inputbox{
+	width: 250px;
+}
+
+.obhelpdesk-table-before td label{
+	font-weight: bold;
+}

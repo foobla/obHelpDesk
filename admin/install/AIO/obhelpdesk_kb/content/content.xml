@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="obhelpdesk_kb" method="upgrade">
+	<name>Content</name>
+	<author>Phong Lo - foobla.com</author>
+	<creationDate>July 2013</creationDate>
+	<copyright>2007-2014 foobla.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>admin@foobla.com</authorEmail>
+	<authorUrl>foobla.com</authorUrl>
+	<version>3.1</version>
+	<description>obHelpDesk KB Plugin</description>
+	<files>
+		<filename plugin="content">content.php</filename>
+		<filename plugin="content">content.xml</filename>
+		<folder>fields</folder>
+		<folder>language</folder>
+	</files>
+	<config> 
+		<fields name="params">
+			<fieldset name="basic">
+				<field addfieldpath="/plugins/obhelpdesk_kb/content/fields" 
+					name="categories" 
+					type="contentcategory" 
+					multiple="multiple" 
+					label="Categories" 
+					size="20" 
+					description="Write down categories id, separate by comma. Example: 2,4,5. Leave blank to get from the whole system." />
+				<field name="itemid" type="text" default="" size="50" label="Menu id" description="write down Itemid of your Knowledgebase menu item. Leave blank to get from Content/K2 router. Example: 102" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_OBHELPDESK_MENU_NEW_TICKET_LAYOUT">
+		<message>
+			<![CDATA[COM_OBHELPDESK_MENU_NEW_TICKET_LAYOUT_DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_OBHELPDESK_MENU_NEW_TICKET_LAYOUT</name>
+		<description><![CDATA[COM_OBHELPDESK_MENU_NEW_TICKET_LAYOUT_DESC]]></description>
+	</state>
+</metadata>

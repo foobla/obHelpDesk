@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>obHelpDesk</name>
+	<author>foobla</author>
+	<creationDate>Feb 2014</creationDate>
+	<copyright>Copyright (c) 2007-2014 foobla.com. All rights reserved.</copyright>
+	<authorEmail>contact@foobla.com</authorEmail>
+	<authorUrl>www.foobla.com</authorUrl>
+	<version>3.1n</version>
+	<license>GNU/GPL v3, see LICENSE</license>
+	<description>COM_OBHELPDESK_MAINIFEST_DESCRIPTION</description>
+	
+	<!-- SQL Files -->
+	<!-- <install folder="admin"> Runs on install
+		<sql>
+			<file driver="mysqli" charset="utf8">install/install.mysql.sql</file>
+			<file driver="mysql" charset="utf8">install/install.mysql.sql</file>
+		</sql>
+	</install> -->
+	<uninstall folder="admin"> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysqli" charset="utf8">install/uninstall.mysql.sql</file>
+			<file driver="mysql" charset="utf8">install/uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+	
+	<!-- Front end file, media and language specification -->
+	<files folder="site">
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>uploads</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>obhelpdesk.php</filename>
+	</files>
+	
+	<!-- Site Language: Don't ask for it, we don't need it in Joomla 2.5+ -->
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_obhelpdesk.ini</language>
+	</languages>
+	
+	<administration>
+		<!-- Administrator Menu -->
+		<menu img="../administrator/components/com_obhelpdesk/assets/images/icons/obhelpdesk_16.png">COM_OBHELPDESK</menu>
+		
+		<!-- Administrator file and language specification -->
+		<files folder="admin">
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>install</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>obhelpdesk.php</filename>
+		</files>
+		<files>
+			<filename>script.obhelpdesk.php</filename>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_obhelpdesk.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_obhelpdesk.sys.ini</language>
+		</languages>
+	</administration>
+	<!-- Installer Hooks -->
+	<scriptfile>script.obhelpdesk.php</scriptfile>
+</extension>

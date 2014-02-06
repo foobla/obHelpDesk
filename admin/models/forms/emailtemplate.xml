@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field
+			name="subject" type="text"
+			label="COM_OBHELPDESK_SUBJECT" description="COM_OBHELPDESK_SUBJECT"
+			size="40" class="inputbox input-block-level"
+			required="true"
+			default=""
+		/>
+		<field
+			name="type" type="text"
+			label="OBHELPDESK_FIELD_TYPE" DESCRIPTION="OBHELPDESK_FIELD_TYPE"
+			class="inputbox"
+			require="true"
+			disabled="true"
+		/>
+	</fieldset>
+	<fieldset name="message">
+		<field name="message" type="editor" class="inputbox"
+			label="COM_OBHELPDESK_MESSAGE" description="COM_OBHELPDESK_MESSAGE"
+			filter="JComponentHelper::filterText" buttons="true" 
+			required="true"
+		/>
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="COM_OBHELPDESK_MENU_NEWTICKET_VIEW">
+		<message>
+			<![CDATA[COM_OBHELPDESK_MENU_NEWTICKET_VIEW_DESC]]>
+		</message>
+	</view>
+</metadata>

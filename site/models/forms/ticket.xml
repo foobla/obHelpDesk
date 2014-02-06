@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="id" type="hidden" />
+		<field
+			name="fullname"
+			type="text"
+			label="Full Name"
+			description="Full Name of Customer"
+			required="true"
+		/>
+		<field
+			name="email"
+			type="email"
+			label="E-mail"
+			description="E-mail of Customer"
+			required="true"
+		/>
+		<field
+			name="priority"
+			type="priority"
+			label="OBHELPDESK_DEPARTMENT_PRIORITY"
+			description=""
+			required="true"
+		/>
+		<field name="staff_id" 
+			type="modal_staff"
+			label="JGLOBAL_USERNAME"
+			required="true" 
+		/>
+		<field name="customer_id" 
+			type="modal_customer"
+			label="JGLOBAL_USERNAME"
+			required="true" 
+		/>
+		<field name="user_id" 
+			type="modal_user"
+			label="JGLOBAL_USERNAME"
+			required="true" 
+		/>
+		<field
+			name="subject"
+			type="text"
+			label="Subject"
+			description="Subject of Ticket"
+			required="true"
+			size="80"
+			class="obhelpdesk-subject input-block-level"
+		/>
+		<field
+			name="content"
+			type="editor"
+			label="Message"
+			description="Content of Ticket"
+			required="true"
+			class="obhelpdesk-content"
+			buttons="false"
+			editor="alternative"
+			filter="safehtml"
+		/>
+		<field name="replytemplate" 
+			type="modal_replytemplate"
+			label="JGLOBAL_USERNAME"
+			required="true" 
+		/>
+	</fieldset>
+</form>

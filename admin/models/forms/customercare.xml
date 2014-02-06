@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+
+		<field name="customer_id" 
+			type="user"
+			label="OBHELPDESK_CUSTOMER_CARE_CUSTOMER_ID"
+			required="true" 
+			class="validate-customercare"
+			description="OBHELPDESK_CUSTOMER_CARE_CUSTOMER_ID"
+		/>
+		<field name="published" type="radio"
+			label="JSTATUS" description=""
+			class="btn-group"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+	<fieldset name="staff">
+		<field
+			name="staff_id_list"
+			type="staffs"
+			label="OBHELPDESK_CUSTOMER_CARE_STAFF_ID_LIST"
+			description="OBHELPDESK_CUSTOMER_CARE_STAFF_ID_LIST_DESC"
+			multiple="multiple"
+			size="10"
+			class="inputstaff"
+			default=""
+		/>
+		
+		<field
+			name="notify_email"
+			type="textarea"
+			label="OBHELPDESK_MANAGEMENT_EMAIL"
+			class="validate-customercare"
+			description="OBHELPDESK_CUSTOMER_CARE_NOTIFY_EMAIL"
+		/>
+	</fieldset>
+</form>

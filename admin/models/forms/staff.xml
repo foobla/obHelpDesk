@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="id" type="hidden" />
+		<field name="user_id" 
+			type="user"
+			label="JGLOBAL_USERNAME"
+			required="true" 
+			class="validate-staff"
+		/>
+		<field
+			name="group_id"
+			type="staffgroup"
+			label="OBHELPDESK_STAFF_GROUP"
+			description=""
+			required="true"
+			class="validate-staff"
+			default=""
+		/>
+		<field
+			name="department_id"
+			type="department"
+			label="OBHELPDESK_STAFF_DEPARTMENT"
+			multiple="multiple"
+			required="true"
+			class="validate-staff"
+		/>
+	</fieldset>
+</form>

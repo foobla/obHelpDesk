@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="id" type="hidden" />
+		<field name="title" 
+			type="text"
+			label="OBHELPDESK_FIELD_LABEL"
+			required="true" 
+			class="inputbox validate-field"
+		/>
+		<field
+			name="name"
+			type="text"
+			label="OBHELPDESK_FIELD_NAME"
+			description=""
+			required="true"
+			class="inputbox validate-field"
+			default=""
+		/>
+		<field
+			name="helptext"
+			type="textarea"
+			label="OBHELPDESK_FIELD_HELP_TEXT"
+			description=""
+			required=""
+			class="inputbox validate-field"
+			default=""
+		/>
+		<field
+			name="type"
+			type="list"
+			label="OBHELPDESK_FIELD_TYPE"
+			class="validate-field"
+			required="true"
+			default="text"
+		>
+			<option value="text">OBHELPDESK_FIELD_TEXT</option>
+			<option value="radio">OBHELPDESK_FIELD_RADIO</option>
+			<option value="checkbox">OBHELPDESK_FIELD_CHECKBOX</option>
+			<option value="checkboxes">OBHELPDESK_FIELD_CHECKBOXES</option>
+			<option value="textarea">OBHELPDESK_FIELD_TEXTAREA</option>
+			<option value="list">OBHELPDESK_FIELD_SELECT</option>
+			<option value="calendar">OBHELPDESK_FIELD_CALENDAR</option>
+			<option value="datetime">OBHELPDESK_FIELD_CALENDAR_AND_DATETIME</option>
+		</field>
+		<field
+			name="required"
+			type="radio"
+			label="OBHELPDESK_FIELD_REQUIRED"
+			class="inputbox validate-field"
+			required="true"
+			default="0"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="published" type="list"
+			label="JSTATUS" description=""
+			size="1" default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+	</fieldset>
+	<fieldset name="text">
+		<field
+			name="default_value"
+			type="text"
+			label="OBHELPDESK_FIELD_DEFAULT_VALUE"
+			class="inputbox validate-field"
+		/>
+		<field
+			name="values"
+			type="textarea"
+			label="OBHELPDESK_FIELD_OPTIONS"
+			class="inputbox validate-field"
+		/>
+		<field
+			name="multiple"
+			type="list"
+			label="OBHELPDESK_FIELD_MULTIPLE"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="breakline"
+			type="list"
+			label="OBHELPDESK_FIELD_BREAKLINE"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="size"
+			type="text"
+			label="OBHELPDESK_FIELD_SIZE"
+			size="3"
+			maxlenght="3"
+			default="20"
+		/>
+		
+		<field
+			name="rows"
+			type="text"
+			label="OBHELPDESK_FIELD_ROWS"
+			size="3"
+			maxlenght="3"
+			default="10"
+		/>
+		<field
+			name="cols"
+			type="text"
+			label="OBHELPDESK_FIELD_COLS"
+			size="3"
+			maxlenght="3"
+			default="60"
+		/>
+		<!-- <field
+			name="editor"
+			type="list"
+			label="OBHELPDESK_FIELD_EDITOR"
+		>
+			<option value="1">COM_OBHELPDESK_ Plan Text</option>
+			<option value="0">COM_OBHELPDESK_ Rich Text</option>
+		</field>
+		-->
+	</fieldset>
+</form>

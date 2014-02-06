@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="id" type="hidden" />
+		<field
+			name="title"
+			type="text"
+			label="OBHELPDESK_GROUPS_GROUPNAME"
+			description=""
+			size="40"
+			class="inputbox validate-group"
+			required="true"
+			default=""
+		/>
+		<field name="published" type="radio"
+			label="JSTATUS" description=""
+			default="1"
+			class="btn-group"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+	</fieldset>
+	<fieldset name="basic">
+		<field
+			name="add_ticket"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_ADD"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="update_ticket"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_UPDATE"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="delete_ticket"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_DELETE"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="answer_ticket"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_ADD_REPLIE"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="delete_ticket_replies"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_DELETE_REPLIES"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="update_ticket_replies"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_UPDATE_REPLIES"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="add_ticket_staffs"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_ADD_BEHALF_STAFF"
+			description="OBHELPDESK_GROUPS_CAN_ADD_BEHALF_STAFF_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="add_ticket_users"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_ADD_BEHALF_USERS"
+			description="OBHELPDESK_GROUPS_CAN_ADD_BEHALF_USERS_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="advance">
+				
+		<field
+			name="assign_tickets"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_ASSIGN"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="change_ticket_status"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_CHANGE_STATUS"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="see_other_tickets"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_SEE_OTHER"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="see_unassigned_tickets"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_SEE_UNALLOCATED"
+			description="OBHELPDESK_GROUPS_CAN_SEE_UNALLOCATED_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="move_ticket"
+ 			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_MOVE"
+			description="OBHELPDESK_GROUPS_CAN_MOVE_DESC"
+ 			default="0"
+ 		>
+ 			<option value="1">JYES</option>
+ 			<option value="0">JNO</option>
+ 		</field>
+		<field
+			name="add_monitoring"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_ADD_MONITORING"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="reopen_ticket"
+			type="radio"
+			class="btn-group"
+			label="OBHELPDESK_GROUPS_CAN_RE_OPEN"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+</form>

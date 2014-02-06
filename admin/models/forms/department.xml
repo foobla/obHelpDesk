@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="id" type="hidden"/>
+		<field
+				name="title"
+				type="text"
+				label="OBHELPDESK_DEPARTMENT_NAME"
+				description=""
+				size="40"
+				class="inputbox validate-department"
+				required="true"
+				default=""
+				/>
+		<field name="published" type="radio"
+			   class="btn-group"
+			   label="JSTATUS" description=""
+			   default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field
+				name="prefix"
+				type="text"
+				label="OBHELPDESK_DEPARTMENT_PREFIX"
+				description=""
+				size="40"
+				class="inputbox"
+				required="true"
+				default=""
+				/>
+		<field
+				name="description"
+				type="textarea"
+				label="OBHELPDESK_DEPARTMENT_DESCRIPTION"
+				description=""
+				cols="30"
+				rows="10"
+				class="inputbox"
+				required="false"
+				/>
+		<field
+				name="label_color"
+				type="color"
+				label="OBHELPDESK_DEPARTMENT_LABEL_COLOR"
+				description=""
+				size="40"
+				class="inputbox"
+				required="true"
+				default=""
+				/>
+		<field
+				name="external_link"
+				type="text"
+				label="OBHELPDESK_DEPARTMENT_EXTERNAL_LINK"
+				description="OBHELPDESK_DEPARTMENT_EXTERNAL_LINK_DES"
+				size="40"
+				class="inputbox span6"
+				default=""
+				/>
+		<field
+				name="assignment_type"
+				type="list"
+				label="OBHELPDESK_DEPARTMENT_TICKET_ASSIGNMENT_TYPE"
+				description=""
+				required="false"
+				default="static"
+				>
+			<option value="static">OBHELPDESK_DEPARTMENT_TICKET_ASSIGNMENT_TYPE_STATIC</option>
+			<option value="automatic">OBHELPDESK_DEPARTMENT_TICKET_ASSIGNMENT_TYPE_AUTOMATIC</option>
+		</field>
+		<field
+				name="priority"
+				type="priority"
+				label="OBHELPDESK_DEPARTMENT_PRIORITY"
+				description=""
+				required="true"
+				/>
+		<field
+				name="file_upload"
+				type="list"
+				label="OBHELPDESK_DEPARTMENT_UPLOAD_FILES_ENABLE_FOR"
+				description="OBHELPDESK_DEPARTMENT_UPLOAD_FILES_ENABLE_FOR"
+				required="false"
+				default="yes"
+				>
+			<option value="yes">OBHELPDESK_DEPARTMENT_UPLOAD_FILES_ENABLE_EVERYONE</option>
+			<option value="users">OBHELPDESK_DEPARTMENT_UPLOAD_FILES_ENABLE_USER</option>
+			<option value="no">OBHELPDESK_DEPARTMENT_UPLOAD_FILES_ENABLE_NOBODY</option>
+		</field>
+		<field
+				name="file_upload_extensions"
+				type="text"
+				label="OBHELPDESK_DEPARTMENT_ALLOWED_EXTENSIONS"
+				description="OBHELPDESK_DEPARTMENT_ALLOWED_EXTENSIONS_DES"
+				size="40"
+				class="inputbox"
+				required="true"
+				default="zip,gz,tar,tgz,rar,pdf"
+				/>
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+			   description="COM_CONTENT_FIELD_LANGUAGE_DESC" class=""
+				>
+			<option value="*">JALL</option>
+		</field>
+	</fieldset>
+	<fieldset name="advance">
+		<field
+				name="user_email_ticket"
+				type="radio"
+				class="btn-group"
+				label="OBHELPDESK_DEPARTMENT_CUSTOMER_RECEIVES_BY_EMAIL"
+				description="OBHELPDESK_DEPARTMENT_CUSTOMER_RECEIVES_BY_EMAIL"
+				default="1"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+				name="staff_email_ticket"
+				type="radio"
+				class="btn-group"
+				label="OBHELPDESK_DEPARTMENT_STAFF_RECEIVES_BY_EMAIL"
+				description="OBHELPDESK_DEPARTMENT_STAFF_RECEIVES_BY_EMAIL"
+				default="1"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+				name="notify_assign"
+				type="radio"
+				class="btn-group"
+				label="OBHELPDESK_DEPARTMENT_NOTIFY_STAFF_ASSIGN"
+				description="OBHELPDESK_DEPARTMENT_NOTIFY_STAFF_ASSIGN"
+				default="1"
+				>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+				name="notify_new_ticket_emails"
+				type="textarea"
+				label="OBHELPDESK_DEPARTMENT_NOTIFY_EMAIL_LIST"
+				description="OBHELPDESK_DEPARTMENT_NOTIFY_EMAIL_LIST"
+				class="inputbox"
+				/>
+		<field
+				name="kb_catid"
+				type="kbcategory"
+				size="20"
+				multiple="multiple"
+				label="OBHELPDESK_DEPARTMENT_KBCATID"
+				description="OBHELPDESK_DEPARTMENT_KBCATID_DESC"
+				/>
+	</fieldset>
+</form>
