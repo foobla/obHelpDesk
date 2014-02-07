@@ -334,7 +334,7 @@ $menu->topnav( 'tickets' );
 		// Prepare reply content to be rendered in expanded mode
 // 				$org_content = obHelpDeskHelper::bbcodeToHtml($msg->content);
 		$org_content = $msg->content;
-		$org_content = preg_replace( '@(https?://([-\w\.]+[-\w])+(:\d+)?(/([\w/_\.#-]*(\?\S+)?[^\.\s])?)?)@', '<a href="$1" target="_blank">$1</a>', $org_content );
+		$org_content = preg_replace( "/(?<!a href=\")(?<!src=\")((http|ftp)+(s)?:\/\/[^<>\s]+)/i", "<a href=\"\\0\" target=\"blank\">\\0</a>", $org_content );
 
 		// Prepare raw content to display in collapsed mode
 		$raw_content    = mb_substr( strip_tags( $msg->content ), 0, 300 );
