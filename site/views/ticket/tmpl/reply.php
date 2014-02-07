@@ -279,7 +279,8 @@ $document->setTitle('['.$this->item->code.'] '.$page_title);
 				<?php endif;?>
 			<?php endif;?>
 			</table>
-			
+
+			<!-- REPLIES -->
 			<div class="obhd_messages_wrap" id="obhd_messages_wrap">
 			<?php 
 			$i = 1;
