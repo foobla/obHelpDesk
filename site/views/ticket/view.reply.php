@@ -30,7 +30,7 @@ class obHelpDeskViewTicket extends obView
 		// Check Permission View ticket
 		if(!obHelpDeskUserHelper::checkViewTicketPermission($user->id, $tid, $is_staff)) { 
 			// if have not permission
-			$msg = JText::_('Access Denied');
+			$msg = JText::_('COM_OBHELPDESK_MSG_NO_PERMISSION_VIEW_TICKET');
 			$app->enqueueMessage($msg, 'warning');
 			$app->redirect(JRoute::_('index.php?option=com_obhelpdesk&view=error'));
 		}

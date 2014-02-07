@@ -81,7 +81,7 @@ class obHelpDeskControllerTicket extends JControllerForm
 		// check permission on department --> User's Groups
 		$DeparmentPermission = obHelpDeskUserHelper::checkDepartmentPermission($department->usergroups, $user->id);
 		if(!$DeparmentPermission) {
-			$msg = JText::_('Access Denied');
+			$msg = JText::_('COM_OBHELPDESK_MSG_NO_PERMISSION_IN_DEPARTMENT');
 			$this->setMessage($msg, 'error');
 			$this->setRedirect(JRoute::_('index.php?option=com_obhelpdesk&view=error'));
 		}
@@ -318,7 +318,7 @@ class obHelpDeskControllerTicket extends JControllerForm
 		$tid = (int) JRequest::getVar('id');
 		$ticket->load($tid);
 		if(!obHelpDeskUserHelper::is_staff($user->id) ) {
-			$msg_error = JText::_('Access Denied!'); 
+			$msg_error = JText::_('COM_OBHELPDESK_MSG_REQUIRE_STAFF_ACCOUNT');
 			$this->setMessage($msg_error, 'error');
 			$this->setRedirect(JRoute::_('index.php?option=com_obhelpdesk&task=ticket.viewdetail&id='.$tid, false));
 			return false;
@@ -390,7 +390,7 @@ class obHelpDeskControllerTicket extends JControllerForm
 
 		// check reply permission
 		if(!obHelpDeskUserHelper::checkReplyTicketPermission($user->id,$tid)) {
-			$msg_error = JText::_('Access Denied'); 
+			$msg_error = JText::_('COM_OBHELPDESK_MSG_NO_PERMISSION_REPLY');
 			$this->setMessage($msg_error, 'error');
 			$this->setRedirect(JRoute::_('index.php?option=com_obhelpdesk&task=ticket.viewdetail&id='.$tid, false));
 			return false;
