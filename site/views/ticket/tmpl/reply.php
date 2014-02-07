@@ -188,7 +188,6 @@ $document->setTitle('['.$this->item->code.'] '.$page_title);
 	</div>
 	
 	<form enctype="multipart/form-data" action="<?php echo JRoute::_('index.php?option=com_obhelpdesk'); ?>" method="post" name="adminForm" id="adminForm" class="form-validate">
-	<?php if($this->item->status != 'closed'):?>
 		<table class="table table-bordered" id="obhelpdesk-ticket-detail" style="display:none;">
 			<tr id="tr_departmentlist">
 				<td><strong><?php echo JText::_('OBHELPDESK_DEPARTMENT');?></strong></td>
@@ -230,13 +229,14 @@ $document->setTitle('['.$this->item->code.'] '.$page_title);
 				<td style="text-align:right"><label id="jform_obhelpdesk_staff" for="jform_obhelpdesk_staff"><?php echo JText::_('COM_OBHELPDESK_STATUS');?></label></td>
 				<td><?php if($this->listStatus) echo $this->listStatus;?>
 			</tr>
+			<?php if($this->item->status != 'closed') : ?>
 			<?php if($this->updatePerm):?>
 			<tr>
 				<td colspan="2"><button type="button" class="btn btn-small btn-primary" onClick="return Joomla.submitbutton('ticket.update')"><i class="icon-ok icon-white"></i> <?php echo JText::_('COM_OBHELPDESK_UPDATE')?></button></td>
 			</tr>
 			<?php endif;?>
+			<?php endif;?>
 		</table>
-		<?php endif;?>
 		<table class="table table-bordered">
 			<?php if($this->item->status != 'closed'):?>
 				<?php if($this->perm_answer):?>
