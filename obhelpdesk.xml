@@ -74,4 +74,8 @@
 	</administration>
 	<!-- Installer Hooks -->
 	<scriptfile>script.obhelpdesk.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="2" name="obHelpDesk Updates">http://foobla.com/updates/obhelpdesk.xml</server>
+	</updateservers>
 </extension>
