@@ -19,7 +19,7 @@ global $option;
 		
 		<tr>
 			<td valign="top"><strong>Copyright</strong></td>
-			<td>(C) 2007-2013 <a href="http://foobla.com" target="_blank">foobla.com</a>.</td>
+			<td>(C) 2007-2014 <a href="http://foobla.com" target="_blank">foobla.com</a>.</td>
 		</tr>
 		
 		
