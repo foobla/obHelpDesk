@@ -60,7 +60,7 @@ $document->setTitle( JText::_('COM_OBHELPDESK_EDIT_REPLY'));
 	$menu->topnav('replytemplates');
 	?>
 <div class="clearfix">&nbsp;</div>
-<form action="<?php echo JRoute::_('index.php?option=com_obhelpdesk');?>" method="post" name="adminForm" id="adminForm" class="form-validate">
+<form action="<?php echo JRoute::_('index.php?option=com_obhelpdesk');?>" method="post" name="adminForm" id="adminForm" class="form-validate form-horizontal">
 	<table class="table table-bordered table-striped">
 		<tr>
 			<td colspan="2">
@@ -84,10 +84,18 @@ $document->setTitle( JText::_('COM_OBHELPDESK_EDIT_REPLY'));
 		</tr>
 		<tr>
 			<td>
-			<div class="form-inline">
-				<?php echo $this->form->getLabel('enable'); ?>
-				<?php echo $this->form->getInput('enable', null, $this->item->enable); ?>
-			</div>
+				<div class="form-inline">
+					<?php echo $this->form->getLabel('level'); ?>
+					<?php echo $this->form->getInput('level', null, $this->item->level); ?>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="form-inline">
+					<?php echo $this->form->getLabel('enable'); ?>
+					<?php echo $this->form->getInput('enable', null, $this->item->enable); ?>
+				</div>
 			</td>
 		</tr>
 		<tr>

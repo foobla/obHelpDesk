@@ -291,7 +291,7 @@ $menu->topnav( 'tickets' );
 					?>
 
 					<div class="btn-group">
-						<button class="btn btn-primary .btn-large" onclick="return Joomla.submitbutton('ticket.reply')">
+						<button class="btn btn-primary" onclick="return Joomla.submitbutton('ticket.reply')">
 							<i class="icon-chevron-right icon-white"></i> <?php echo JText::_( 'OBHELPDESK_SEND_REPLY' ); ?>
 						</button>
 						<button class="btn btn-primary .btn-large dropdown-toggle" data-toggle="dropdown">

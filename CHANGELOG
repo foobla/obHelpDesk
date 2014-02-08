@@ -3,6 +3,8 @@ $Id: CHANGELOG 103 2013-12-18 10:42:49Z thongta $
 /* 3.1o - 2014.--.-- */
 + Added anchor link auto detected to reply messages.
 ~ Improved some JText string, gave error messages clearer information.
+~ Cleaned the Canned Responses layout on Frontend.
++ Added Multiple Level support for Canned Responses.
 
 /* 3.1n - 2014.02.06 */
 + Added External Department Type, link to external URL (outside of obHelpDesk).

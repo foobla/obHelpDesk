@@ -148,6 +148,21 @@ class com_obHelpDeskInstallerScript {
 			}
 
 			# UPDATE DATABASE
+			// update replytemplates with level, from 3.1o
+			$query_check = "SHOW FIELDS FROM `#__obhelpdesk3_replytemplates` LIKE 'level'";
+			$db->setQuery( $query_check );
+			if ( ! $res = $db->loadObject() ) {
+				$query = '
+					ALTER TABLE `#__obhelpdesk3_replytemplates`
+					ADD COLUMN `level` SMALLINT(3) DEFAULT 0 AFTER `published`;
+
+					ALTER TABLE `__obhelpdesk3_replytemplates`
+					DROP COLUMN `default`;
+				';
+				$db->setQuery( $query );
+				$db->query();
+			}
+
 			// update department with external_link feature, from 3.1n
 			$query_check = "SHOW FIELDS FROM `#__obhelpdesk3_departments` LIKE 'external_link'";
 			$db->setQuery( $query_check );

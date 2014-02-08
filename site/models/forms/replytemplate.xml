@@ -1,30 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
 	<fieldset name="details">
-		<field name="id" type="hidden" />
+		<field name="id" type="hidden"/>
 		<field
-			name="subject"
-			type="text"
-			label="COM_OBHELPDESK_SUBJECT"
-			description=""
-			required="true"
-		/>
-		
+				name="subject"
+				type="text"
+				label="COM_OBHELPDESK_SUBJECT"
+				description=""
+				required="true"
+				/>
+
+		<field name="level" type="list"
+			   label="COM_OBHELPDESK_CANNED_RESPONSE_LEVEL_LBL" description="COM_OBHELPDESK_CANNED_RESPONSE_LEVEL_DES"
+			   default="1">
+			<option value="0">No level</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</field>
+
 		<field
-			name="content"
-			type="editor"
-			label="COM_OBHELPDESK_CONTENT"
-			description="COM_OBHELPDESK_SUBJECT_DESC"
-			required="true"
-			class="obhelpdesk-content"
-			buttons="false"
-			editor="alternative"
-			filter="safehtml"
-		/>
-		
+				name="content"
+				type="editor"
+				label="COM_OBHELPDESK_CONTENT"
+				description="COM_OBHELPDESK_SUBJECT_DESC"
+				required="true"
+				class="obhelpdesk-content"
+				buttons="false"
+				editor="alternative"
+				filter="safehtml"
+				/>
+
 		<field name="enable" type="list"
-			label="JSTATUS" description=""
-			size="1" default="1" >
+			   label="JSTATUS" description=""
+			   default="1">
 			<option value="1">COM_OBHELPDESK_ENABLED</option>
 			<option value="0">COM_OBHELPDESK_DISABLED</option>
 		</field>

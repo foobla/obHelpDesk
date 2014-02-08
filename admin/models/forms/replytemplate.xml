@@ -14,8 +14,16 @@
 			default="1" >
 			<option value="1">JPUBLISHED</option>
 			<option value="0">JUNPUBLISHED</option>
-			<option value="2">JARCHIVED</option>
-			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="level" type="list"
+			   label="OBHELPDESK_CANNED_RESPONSE_LEVEL_LBL" description="OBHELPDESK_CANNED_RESPONSE_LEVEL_DES"
+			   default="1" >
+			<option value="0">No level</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
 		</field>
 		<field
 			name="modified_date"  class="readonly"
