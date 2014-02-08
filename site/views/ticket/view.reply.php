@@ -98,12 +98,13 @@ class obHelpDeskViewTicket extends obView {
 		$this->bbcode  = $editor_bbcode;
 		if ( $this->item->status != 'closed' ) {
 			$content = '';
-			// get canned response
-			$default_reply_template = $model->get_canned_response( $tid );
-			if ( $default_reply_template ) {
-				$content = obHelpDeskHelper::html2bbcode( obHelpDeskTicketHelper::getReplyTemplate( $default_reply_template, $this->item->customer_id, $this->item->customer_email ) );
+			if ( $is_staff ) {
+				// get canned response
+				$default_reply_template = $model->get_canned_response( $tid );
+				if ( $default_reply_template ) {
+					$content = obHelpDeskHelper::html2bbcode( obHelpDeskTicketHelper::getReplyTemplate( $default_reply_template, $this->item->customer_id, $this->item->customer_email ) );
+				}
 			}
-
 			$config = array();
 			if ( ! $is_staff ) {
 				$config = array( 'bold', 'italic', 'underline', 'hypelink', 'image', 'list', 'color', 'quote', 'source' );
