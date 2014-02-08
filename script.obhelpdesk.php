@@ -149,9 +149,9 @@ class com_obHelpDeskInstallerScript {
 
 			# UPDATE DATABASE
 			// update replytemplates with level, from 3.1o
-			$query_check = "SHOW FIELDS FROM `#__obhelpdesk3_replytemplates` LIKE 'level'";
+			$query_check = "SHOW FIELDS FROM `#__obhelpdesk3_replytemplates` LIKE 'default'";
 			$db->setQuery( $query_check );
-			if ( ! $res = $db->loadObject() ) {
+			if ( $res = $db->loadObject() ) {
 				$query = '
 					ALTER TABLE `#__obhelpdesk3_replytemplates`
 						DROP COLUMN `default`,
