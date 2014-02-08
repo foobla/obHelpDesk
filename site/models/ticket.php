@@ -98,7 +98,6 @@ class obHelpDeskModelTicket extends JModelAdmin {
 	 */
 	function get_canned_response( $ticket_id ) {
 		$user     = JFactory::getUser();
-		$staff_id = $user->id;
 
 		$db = JFactory::getDbo();
 
@@ -111,6 +110,7 @@ class obHelpDeskModelTicket extends JModelAdmin {
 				`#__obhelpdesk3_staffs` AS s
 			WHERE
 				s.`user_id` = m.`user_id` AND
+				m.`user_id` = {$user->id} AND
 				m.`tid` = {$ticket_id}
 		";
 		$db->setQuery( $sql );
