@@ -115,7 +115,7 @@ class obHelpDeskModelTicket extends JModelAdmin {
 		";
 		$db->setQuery( $sql );
 		$level = $db->loadResult() + 1;
-//		echo '<br />level: ' . $level;
+		echo '<br />level: ' . $level;
 
 		// get max level for canned response
 		$sql = "
@@ -130,9 +130,10 @@ class obHelpDeskModelTicket extends JModelAdmin {
 		";
 		$db->setQuery( $sql );
 		$max_level = $db->loadResult();
-//		echo '<br />max_level: ' . $max_level;
+		echo '<br />max_level: ' . $max_level;
 
-		// get the canned response content
+		// get the canned response (CR) content, if there no configured CR for this level, use the max level CR.
+		// if there are more than one CR in the same level, it will get the last modified one
 		$sql = "
 			SELECT
 				`content`
@@ -140,8 +141,7 @@ class obHelpDeskModelTicket extends JModelAdmin {
 				`#__obhelpdesk3_replytemplates`
 			WHERE
 				`staff_id` = {$user->id} AND
-				`level` IN ({$level}, {$max_level})
-			ORDER BY `modified_date` DESC
+				( `level` = {$level} OR `level` =  {$max_level} )
 			LIMIT 1
 		";
 		$db->setQuery( $sql );
