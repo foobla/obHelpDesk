@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `#__obhelpdesk3_replytemplates` (
   `staff_id` int(11) NOT NULL,
   `enable` tinyint(1) NOT NULL,
   `published` tinyint(1) NOT NULL,
-  `default` tinyint(11) NOT NULL,
+  `level` tinyint(3) NULL DEFAULT 0,
   `ordering` int(11) NOT NULL,
   `modified_date` datetime NOT NULL,
   `created_date` datetime NOT NULL,
