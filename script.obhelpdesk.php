@@ -154,10 +154,8 @@ class com_obHelpDeskInstallerScript {
 			if ( ! $res = $db->loadObject() ) {
 				$query = '
 					ALTER TABLE `#__obhelpdesk3_replytemplates`
-					ADD COLUMN `level` SMALLINT(3) DEFAULT 0 AFTER `published`;
-
-					ALTER TABLE `#__obhelpdesk3_replytemplates`
-					DROP COLUMN `default`;
+						DROP COLUMN `default`,
+						ADD COLUMN `level` SMALLINT(3) NULL DEFAULT 0 AFTER `published`
 				';
 				$db->setQuery( $query );
 				$db->query();
