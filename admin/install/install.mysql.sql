@@ -238,7 +238,7 @@ INSERT IGNORE INTO `#__obhelpdesk3_staffs`
 	FROM #__users AS u LEFT JOIN #__user_usergroup_map AS uum ON u.id = uum.user_id
 	WHERE uum.group_id=8 ORDER BY u.lastvisitDate DESC LIMIT 1;
 
-INSERT IGNORE INTO `#__obhelpdesk3_replytemplates` (`id`, `subject`, `content`, `staff_id`, `enable`, `published`, `default`, `ordering`, `modified_date`, `created_date`, `copy_from`, `checked_out`, `checked_out_time`) VALUES
+INSERT IGNORE INTO `#__obhelpdesk3_replytemplates` (`id`, `subject`, `content`, `staff_id`, `enable`, `published`, `level`, `ordering`, `modified_date`, `created_date`, `copy_from`, `checked_out`, `checked_out_time`) VALUES
 (1, 'Test', '<p>{username} Show staff name</p>\r\n<p>{customer} Show customer name</p>\r\n<p>{date} Show current date</p>\r\n<p>{cursor} Set cursor to here when start to reply</p>', (SELECT `user_id` FROM `#__obhelpdesk3_staffs` LIMIT 1), 0, 1, 0, 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00'),
 (2, 'Testsss', '<p>ssdfsdfsdf</p>', (SELECT `user_id` FROM `#__obhelpdesk3_staffs` LIMIT 1), 0, 1, 0, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00');
 
