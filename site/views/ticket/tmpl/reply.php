@@ -396,10 +396,18 @@ $menu->topnav( 'tickets' );
 							$time     = JFactory::getDate( $msg->reply_time )->format( 'YmdHis' );
 							$filepath = JPATH_COMPONENT . DS . 'uploads' . DS . $time . $arr_files[$j];
 							if ( file_exists( $filepath ) ):
+								$file_url = JRoute::_( 'index.php?option=com_obhelpdesk&task=ticket.download&msg_id=' . $msg->id . '&file=' . base64_encode( $filepath ) );
 								?>
-								<a target="_blank" href="<?php echo JRoute::_( 'index.php?option=com_obhelpdesk&task=ticket.download&msg_id=' . $msg->id . '&file=' . base64_encode( $filepath ) ); ?>"><i class="icon-download-alt"></i><?php echo $file; ?>
+								<a target="_blank" href="<?php echo $file_url; ?>">
+									<i class="icon-download-alt"></i><?php echo $file; ?>
 								</a>
 								<small>(<?php echo intval( filesize( $filepath ) / 1024 ); ?> Kb)</small>
+								<?php
+								// render image if the file is an image
+								if ( exif_imagetype( $filepath ) ) {
+									echo "<img src='{$file_url}' class='img-responsive thumbnail' />";
+								}
+								?>
 								<br />
 							<?php
 							endif;
