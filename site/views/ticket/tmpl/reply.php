@@ -143,7 +143,7 @@ $menu->topnav( 'tickets' );
 		<span class="label label-ticket" style="background-color: <?php echo $this->department->label_color; ?>">
 			<?php echo $this->item->code; ?>
 		</span>
-	&nbsp;<?php echo $this->item->subject; ?>
+	&nbsp;<?php echo htmlspecialchars( $this->item->subject ); ?>
 </h3>
 
 <div class="obhelpdesk-profile-bar">
