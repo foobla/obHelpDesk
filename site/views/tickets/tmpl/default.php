@@ -177,7 +177,7 @@ $saveOrder = $listOrder == 'a.ordering';
 
 						<td class="<?php echo $item->row_status; ?>">
 							<span class="label label-department" style="background-color: <?php echo $item->label_color; ?>"><?php echo $item->prefix; ?></span><span class="label label-code hasTip" style="background-color: <?php echo $item->priority_color; ?>" title="<?php echo JText::_( 'COM_OBHELPDESK_PRIORITY' ) . ': ' . $item->priority_name; ?>"><?php echo $item->id; ?></span>
-							<a href="<?php echo JRoute::_( 'index.php?option=com_obhelpdesk&task=ticket.viewdetail&id=' . (int) $item->id ); ?>"><?php echo $item->subject; ?></a>
+							<a href="<?php echo JRoute::_( 'index.php?option=com_obhelpdesk&task=ticket.viewdetail&id=' . (int) $item->id ); ?>"><?php echo htmlspecialchars( $item->subject ); ?></a>
 							<a class="pull-right" title="<?php echo JText::_( 'COM_OBHELPDESK_SHOW_HIDE_PREVIEW' ) ?>" onclick="ShowDetailMsg(<?php echo $item->id ?>);" href="javascript:void();"><i id="obhelpdesk_item_<?php echo $item->id ?>_ico" class="icon-expand"></i></a>
 
 							<div id="obhelpdesk_item_<?php echo $item->id ?>" style="display:none;"><?php echo $item->message; ?></div>
