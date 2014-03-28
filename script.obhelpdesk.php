@@ -109,7 +109,36 @@ class com_obHelpDeskInstallerScript {
 	 */
 	function update( JAdapterInstance $adapter ) {
 		// $parent is the class calling this method
-
+		$db = JFactory::getDbo();
+		#UPGRARDE DATABASE
+		$sql = 'SHOW FIELDS FROM `#__obhelpdesk3_replytemplates`';
+		$db->setQuery($sql);
+		$fields = $db->loadColumn();
+		
+		
+		if(!in_array('hits',$fields)){
+			// add hits field
+			$sql = 'ALTER TABLE `#__obhelpdesk3_replytemplates` '
+						.' ADD COLUMN `hits` INT(11) ZEROFILL UNSIGNED NULL';
+			$db->setQuery( $query );
+			$db->execute();
+		}
+		
+		if ( in_array('default',$fields) ) {
+			// remove default field
+			$sql = 'ALTER TABLE `#__obhelpdesk3_replytemplates` '
+						.' DROP COLUMN `default`';
+			$db->setQuery( $sql );
+			$db->execute();
+		}
+	
+		if ( !in_array('level',$fields) ) {
+			// update replytemplates with level, from 3.1o
+			$query = 'ALTER TABLE `#__obhelpdesk3_replytemplates` '
+						.' ADD COLUMN `level` SMALLINT(3) NULL DEFAULT 0 AFTER `published`';
+			$db->setQuery( $query );
+			$db->execute();
+		}
 		return;
 	}
 
@@ -136,6 +165,7 @@ class com_obHelpDeskInstallerScript {
 	public function postflight( $route, JAdapterInstance $adapter ) {
 		$app = JFactory::getApplication();
 		$db  = JFactory::getDbo();
+		
 		if ( $route == 'install' || $route == 'update' ) {
 
 			# INIT DATABASE
@@ -148,19 +178,6 @@ class com_obHelpDeskInstallerScript {
 			}
 
 			# UPDATE DATABASE
-			// update replytemplates with level, from 3.1o
-			$query_check = "SHOW FIELDS FROM `#__obhelpdesk3_replytemplates` LIKE 'default'";
-			$db->setQuery( $query_check );
-			if ( $res = $db->loadObject() ) {
-				$query = '
-					ALTER TABLE `#__obhelpdesk3_replytemplates`
-						DROP COLUMN `default`,
-						ADD COLUMN `level` SMALLINT(3) NULL DEFAULT 0 AFTER `published`
-				';
-				$db->setQuery( $query );
-				$db->query();
-			}
-
 			// update department with external_link feature, from 3.1n
 			$query_check = "SHOW FIELDS FROM `#__obhelpdesk3_departments` LIKE 'external_link'";
 			$db->setQuery( $query_check );
@@ -215,21 +232,7 @@ class com_obHelpDeskInstallerScript {
 			# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			# Check is update or new install
 			# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-			$sql = "SELECT
-						`id`,`module`
-					FROM
-						`#__modules`
-					WHERE
-							`module`='mod_obhelpdesk_customer'
-							OR `module`='mod_obhelpdesk_overduetickets'
-							OR `module`='mod_obhelpdesk_newesttickets'
-							OR `module`='mod_obhelpdesk_departmentsstats'
-							OR `module`='mod_obhelpdesk_ticketsstats'";
-			$db->setQuery( $sql );
-			$rows = $db->loadAssocList( 'module' );
-
-			$isUpdate = ( count( $rows ) ); //P
-
+			$isUpdate = ($route == 'update');
 
 			# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			# Install modules
