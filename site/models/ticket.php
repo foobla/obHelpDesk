@@ -134,18 +134,22 @@ class obHelpDeskModelTicket extends JModelAdmin {
 
 		// get the canned response (CR) content, if there no configured CR for this level, use the max level CR.
 		// if there are more than one CR in the same level, it will get the last modified one
-		$sql = "
-			SELECT
-				`content`
-			FROM
-				`#__obhelpdesk3_replytemplates`
-			WHERE
-				`staff_id` = {$user->id} AND
-				( `level` = {$level} OR `level` =  {$max_level} )
-			LIMIT 1
-		";
-		$db->setQuery( $sql );
-		$content = $db->loadResult();
+		if( $max_level ) {
+			$sql = "
+				SELECT
+					`content`
+				FROM
+					`#__obhelpdesk3_replytemplates`
+				WHERE
+					`staff_id` = {$user->id} AND
+					( `level` = {$level} OR `level` =  {$max_level} )
+				LIMIT 1
+			";
+			$db->setQuery( $sql );
+			$content = $db->loadResult();
+		}else{
+			$content = '';
+		}
 
 		return $content;
 	}
