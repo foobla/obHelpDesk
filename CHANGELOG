@@ -1,5 +1,8 @@
 $Id: CHANGELOG 103 2013-12-18 10:42:49Z thongta $
 
+/* 3.1q - 2014.05.12 */
+~ Fixed not compatible with plugin for obHelpDesk.
+
 /* 3.1p - 2014.03.14 */
 + Added image preview in reply message for images.
 ~ Fixed installation issue on Joomla 2.5.
