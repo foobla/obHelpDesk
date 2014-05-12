@@ -101,10 +101,12 @@ if ( $isJ25 ) {
 }
 // $document->addStyleSheet(JURI::base().'components/'.$option.'/assets/css/bootstrap.css');
 $document->addStyleSheet( JURI::base() . 'components/' . $option . '/assets/css/style.min.css' );
+
 $controller = obController::getInstance( 'obHelpDesk' );
 if ( $isJ25 ) {
 	$controller->execute( JRequest::getCmd( 'task' ) );
 } else {
 	$controller->execute( JFactory::getApplication()->input->get( 'task' ) );
 }
+
 $controller->redirect();
