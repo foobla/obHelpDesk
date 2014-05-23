@@ -8,6 +8,7 @@
 
 // no direct access
 defined( '_JEXEC' ) or die;
+defined('DS') or define('DS',DIRECTORY_SEPARATOR);
 
 jimport( 'joomla.filesystem.file' );
 jimport( 'joomla.filesystem.folder' );
@@ -110,35 +111,7 @@ class com_obHelpDeskInstallerScript {
 	function update( JAdapterInstance $adapter ) {
 		// $parent is the class calling this method
 		$db = JFactory::getDbo();
-		#UPGRARDE DATABASE
-		$sql = 'SHOW FIELDS FROM `#__obhelpdesk3_replytemplates`';
-		$db->setQuery($sql);
-		$fields = $db->loadColumn();
 		
-		
-		if(!in_array('hits',$fields)){
-			// add hits field
-			$sql = 'ALTER TABLE `#__obhelpdesk3_replytemplates` '
-						.' ADD COLUMN `hits` INT(11) ZEROFILL UNSIGNED NULL';
-			$db->setQuery( $query );
-			$db->execute();
-		}
-		
-		if ( in_array('default',$fields) ) {
-			// remove default field
-			$sql = 'ALTER TABLE `#__obhelpdesk3_replytemplates` '
-						.' DROP COLUMN `default`';
-			$db->setQuery( $sql );
-			$db->execute();
-		}
-	
-		if ( !in_array('level',$fields) ) {
-			// update replytemplates with level, from 3.1o
-			$query = 'ALTER TABLE `#__obhelpdesk3_replytemplates` '
-						.' ADD COLUMN `level` SMALLINT(3) NULL DEFAULT 0 AFTER `published`';
-			$db->setQuery( $query );
-			$db->execute();
-		}
 		return;
 	}
 
@@ -165,14 +138,16 @@ class com_obHelpDeskInstallerScript {
 	public function postflight( $route, JAdapterInstance $adapter ) {
 		$app = JFactory::getApplication();
 		$db  = JFactory::getDbo();
-		
+
 		if ( $route == 'install' || $route == 'update' ) {
 
 			# INIT DATABASE
-			$sqlfile = dirname( __FILE__ ) . DS . 'admin' . DS . 'install' . DS . 'install.mysql.sql';
+			$sqlfile = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'install' . DIRECTORY_SEPARATOR . 'install.mysql.sql';
+
 			if ( ! JFile::exists( $sqlfile ) ) {
-				$sqlfile = JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_obhelpdesk' . DS . 'install' . DS . 'install.mysql.sql';
+				$sqlfile = JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_obhelpdesk' . DIRECTORY_SEPARATOR . 'install' . DIRECTORY_SEPARATOR . 'install.mysql.sql';
 			}
+
 			if ( JFile::exists( $sqlfile ) ) {
 				$this->executeSqlFile( $sqlfile );
 			}
@@ -228,6 +203,37 @@ class com_obHelpDeskInstallerScript {
 					$this->executeSqlFile( $sqlfile );
 				}
 			}
+			
+			//3 update replytemplates table
+			$sql = 'SHOW FIELDS FROM `#__obhelpdesk3_replytemplates`';
+			$db->setQuery($sql);
+			$fields = $db->loadColumn();
+			
+			
+			if(!in_array('hits',$fields)){
+				// add hits field
+				$sql = 'ALTER TABLE `#__obhelpdesk3_replytemplates` '
+							.' ADD COLUMN `hits` INT(11) ZEROFILL UNSIGNED NULL';
+				$db->setQuery( $query );
+				$db->execute();
+			}
+			
+			if ( in_array('default',$fields) ) {
+				// remove default field
+				$sql = 'ALTER TABLE `#__obhelpdesk3_replytemplates` '
+							.' DROP COLUMN `default`';
+				$db->setQuery( $sql );
+				$db->execute();
+			}
+		
+			if ( !in_array('level',$fields) ) {
+				// update replytemplates with level, from 3.1o
+				$query = 'ALTER TABLE `#__obhelpdesk3_replytemplates` '
+							.' ADD COLUMN `level` SMALLINT(3) NULL DEFAULT 0 AFTER `published`';
+				$db->setQuery( $query );
+				$db->execute();
+			}
+
 
 			# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 			# Check is update or new install

@@ -1,7 +1,10 @@
 $Id: CHANGELOG 103 2013-12-18 10:42:49Z thongta $
+/* 3.1r - 2014.05.23 */
+~ Fixed issues cannot install new on joomla 3.3
 
 /* 3.1q - 2014.05.12 */
 ~ Fixed not compatible with plugin for obHelpDesk.
+
 
 /* 3.1p - 2014.03.14 */
 + Added image preview in reply message for images.
