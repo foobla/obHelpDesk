@@ -68,10 +68,10 @@ class plgobHelpDesk_kbContent extends JPlugin
 		$res 	= $db->loadObjectList();
 		$count = count($res);
 		if($db->getErrorNum()){
-// 			echo '<pre>' . print_r( $db->getErrorMsg(), true ) . '</pre>';
+
 		}
 		if(!$res){
-// 			echo '<h1>NULL</h1>';
+
 		}
 		require_once(JPATH_SITE.DS.'components'.DS.'com_content'.DS.'helpers'.DS.'route.php');
 		for( $i=0; $i<$count; $i++ ){

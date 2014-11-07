@@ -185,7 +185,7 @@ class obHelpDeskModelTickets extends JModelList
 
 		$email = ($user->email)? $user->email : '';
 		if(!$is_staff) {
-			$query->where('a.customer_email = "'.$user->email.'"');
+			$query->where('a.customer_email = "'.$user->email.'" OR a.customer_id = '.$user->id);
 		} else {
 			//is Staff
 			$this->dids = obHelpDeskUserHelper::getStaffDepartment($user->id);
